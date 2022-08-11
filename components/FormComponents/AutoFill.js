@@ -72,8 +72,8 @@ export default function AutoFill() {
               return <li key={index}>
               <input className="hover:bg-purple-900 hover:text-white w-full py-1 px-2 cursor-pointer" readOnly onClick={(e)=>setMainValue(e.target.value)} value={option.value} key={option.value}></input>
             </li>
-           }) : filtered.map((filter)=>{
-             return <li className="">
+           }) : filtered.map((filter,key)=>{
+             return <li key={index} className="">
                <input className=" hover:bg-purple-900 hover:text-white w-full py-1 px-2 cursor-pointer "  onClick={(e)=>setMainValue(e.target.value)} value={filter.value} key={filter.value}></input>
              </li>
            })}
