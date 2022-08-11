@@ -75,7 +75,7 @@ export default function Menu({filled,outlined,title,onClickHandle}) {
             <ul className='w-full px-2 py-4 bg-white'>
                 {/**Render list */}
                 {options.map((option,index)=>{
-                    return <li className='p-2 hover:bg-purple-900 hover:text-white cursor-pointer'><button value="Cicked" onClick={(e)=>{alert(e.target.value
+                    return <li key={index} className='p-2 hover:bg-purple-900 hover:text-white cursor-pointer'><button value="Cicked" onClick={(e)=>{alert(e.target.value
                         )}}>{option.title +`${index+1}`}</button></li>
                 })}
             </ul>

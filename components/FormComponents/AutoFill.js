@@ -68,8 +68,8 @@ export default function AutoFill() {
       {isOpenMenu && 
         <ul className="w-full max-h-[250px] overflow-y-auto mt-2 border flex flex-col gap-3 py-2 px-1 bg-white ">
        
-           { filtered.length===0 ? options.map((option)=>{
-              return <li>
+           { filtered.length===0 ? options.map((option,index)=>{
+              return <li key={index}>
               <input className="hover:bg-purple-900 hover:text-white w-full py-1 px-2 cursor-pointer" readOnly onClick={(e)=>setMainValue(e.target.value)} value={option.value} key={option.value}></input>
             </li>
            }) : filtered.map((filter)=>{
